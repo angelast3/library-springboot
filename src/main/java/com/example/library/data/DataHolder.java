@@ -38,10 +38,10 @@ public class DataHolder {
         Author author1 = this.authorRepository.save(new Author("Arthur", "Beck", austria));
         Author author2 = this.authorRepository.save(new Author("Fiona", "Chan", france));
 
-        Book book = this.bookRepository.save(new Book("bookname", Category.BIOGRAPHY, author1, 2));
-        Book the_hunger_games = this.bookRepository.save(new Book("The hunger games", Category.BIOGRAPHY, author1, 10));
-        Book little_women = this.bookRepository.save(new Book("Little women", Category.BIOGRAPHY, author2, 5));
-        Book pinocchio = this.bookRepository.save(new Book("Pinocchio", Category.BIOGRAPHY, author1, 6));
+        Book book = this.bookRepository.save(new Book("The Great Gatsby", Category.NOVEL, author1, 2));
+        Book the_hunger_games = this.bookRepository.save(new Book("The hunger games", Category.FANTASY, author1, 10));
+        Book little_women = this.bookRepository.save(new Book("Little women", Category.DRAMA, author2, 5));
+        Book pinocchio = this.bookRepository.save(new Book("Pinocchio", Category.NOVEL, author1, 6));
 
     }
 }

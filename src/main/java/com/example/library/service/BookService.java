@@ -22,6 +22,5 @@ public interface BookService {
     Optional<Book> edit(Long id, String name, Category category, Author author, Integer availableCopies);
     Optional<Book> edit(Long id, BookDto bookDto);
 
-    Optional<Book> increaseAvailableBooks(Long id);
     Optional<Book> decreaseAvailableBooks(Long id);
 }

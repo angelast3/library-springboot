@@ -84,20 +84,6 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Optional<Book> increaseAvailableBooks(Long id) {
-        Book book = this.bookRepository.findById(id).orElseThrow(BookNotFoundException::new);
-        Author auth = this.authorRepository.findById(book.getAuthor().getId()).orElseThrow(AuthorNotFoundException::new);
-
-        book.setAuthor(auth);
-        book.setName(book.getName());
-        book.setCategory(book.getCategory());
-        book.setAvailableCopies(book.getAvailableCopies()+1);
-
-        this.bookRepository.save(book);
-        return Optional.of(book);
-    }
-
-    @Override
     public Optional<Book> decreaseAvailableBooks(Long id) {
         Book book = this.bookRepository.findById(id).orElseThrow(BookNotFoundException::new);
         Author auth = this.authorRepository.findById(book.getAuthor().getId()).orElseThrow(AuthorNotFoundException::new);

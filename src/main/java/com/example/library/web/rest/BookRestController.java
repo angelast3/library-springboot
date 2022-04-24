@@ -56,14 +56,7 @@ public class BookRestController {
         return ResponseEntity.badRequest().build();
     }
 
-    @PutMapping("/increase-book/{id}")
-    public ResponseEntity<Book> increaseAvailableBooks(@PathVariable Long id) {
-        return this.bookService.increaseAvailableBooks(id)
-                .map(book -> ResponseEntity.ok().body(book))
-                .orElseGet(() -> ResponseEntity.badRequest().build());
-    }
-
-    @PutMapping("/decrease-book/{id}")
+    @PutMapping("/take-copy/{id}")
     public ResponseEntity<Book> decreaseAvailableBooks(@PathVariable Long id) {
         return this.bookService.decreaseAvailableBooks(id)
                 .map(book -> ResponseEntity.ok().body(book))

@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "https://library-react-193199.herokuapp.com/")
+@CrossOrigin(origins = "https://library-react-193199.herokuapp.com")
 @RequestMapping("/api/books")
 public class BookRestController {
 

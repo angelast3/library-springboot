@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "https://library-react-193199.herokuapp.com/")
+@CrossOrigin(origins = "https://library-react-193199.herokuapp.com")
 @RequestMapping("/api/authors")
 public class AuthorRestController {
     private final AuthorService authorService;

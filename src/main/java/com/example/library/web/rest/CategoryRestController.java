@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "https://library-react-193199.herokuapp.com/")
+@CrossOrigin(origins = "https://library-react-193199.herokuapp.com")
 @RequestMapping("/api/categories")
 public class CategoryRestController {
 
